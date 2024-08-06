@@ -3,1112 +3,561 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootstrap | Resposive</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <title>Portfolio</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script
-      defer
-      src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    ></script>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand me-auto text-primary fw-bold" href="index.html"
-          >MST</a
-        >
 
-        <div
-          class="offcanvas offcanvas-end bg-custom"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
+    <link rel="icon" type="image/x-icon" href="imgs/boy.png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body class="bg-[#11001f] font-poppin overflow-x-hidden">
+    <nav
+      class="z-[999] flex fixed w-full justify-between items-center py-2 px-[10%] lg:border-b-[1px] md:border-b-[1px] border-gray-600 bg-[#11001f]"
+    >
+      <h1 class="font-bold text-white text-3xl">
+        TRY43
+        <span class="font-bold text-4xl ml-[-5px] text-purple-700">.</span>
+      </h1>
+      <ul
+        class="hidden py-4 px-6 lg:flex md:flex justify-center items-center gap-5"
+      >
+        <li>
+          <a href="#home" class="text-white text-sm relative nav-link activeee"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a href="#about" class="text-white text-sm relative nav-link"
+            >About me</a
+          >
+        </li>
+        <li>
+          <a href="#sevices" class="text-white text-sm relative nav-link"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a href="#word" class="text-white text-sm relative nav-link"
+            >My Work</a
+          >
+        </li>
+        <li>
+          <a href="#contact" class="text-white text-sm relative nav-link"
+            >Contact me</a
+          >
+        </li>
+      </ul>
+      <ul
+        id="side"
+        class="lg:hidden md:hidden z-50 bg-[#2a004aa6] flex-col items-start absolute transition:ease-out duration-300 top-[-20px] mt-5 w-1/2 h-screen sidebar"
+      >
+        <li
+          class="w-full bg-purple-500 px-4 py-2 flex justify-between items-start"
         >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MST</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
+          <h1 class="font-bold text-white text-3xl">
+            TRY43
+            <span class="font-bold text-4xl ml-[-5px] text-purple-700">.</span>
+          </h1>
+          <button id="btn-hide" class="text-white text-2xl">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
+        </li>
+        <li
+          class="w-full bg-purple-500 hover:bg-purple-700 px-4 py-2 transition:ease-out duration-300"
+        >
+          <a href="#home" class="text-white text-sm">Home</a>
+        </li>
+        <li
+          class="w-full bg-purple-500 hover:bg-purple-700 px-4 py-2 transition:ease-out duration-300"
+        >
+          <a href="#about" class="text-white text-sm">About me</a>
+        </li>
+        <li
+          class="w-full bg-purple-500 hover:bg-purple-700 px-4 py-2 transition:ease-out duration-300"
+        >
+          <a href="#sevices" class="text-white text-sm">Services</a>
+        </li>
+        <li
+          class="w-full bg-purple-500 hover:bg-purple-700 px-4 py-2 transition:ease-out duration-300"
+        >
+          <a href="#word" class="text-white text-sm">My Work</a>
+        </li>
+        <li
+          class="w-full bg-purple-500 hover:bg-purple-700 px-4 py-2 transition:ease-out duration-300"
+        >
+          <a href="#contact" class="text-white text-sm">Contact me</a>
+        </li>
+      </ul>
+      <div class="flex justify-center items-center gap-5">
+        <button class="text-white text-3xl">
+          <i class="fa fa-sun-o" aria-hidden="true"></i>
+        </button>
+        <a
+          href="#contact"
+          class="hidden group lg:block text-white text-sm cursor-pointer py-2 px-3 bg-[#290039] rounded-xl hover:rounded-sm hover:bg-gradient-to-r from-purple-700 to-pink-800 transition-all ease-out duration-500"
+        >
+          Contact<i
+            class="fa fa-paper-plane-o ml-3 text-xl"
+            aria-hidden="true"
+          ></i>
+        </a>
+        <p id="btn-show" class="lg:hidden md:hidden text-white text-3xl">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </p>
+      </div>
+    </nav>
+    <section id="home"></section>
+    <section class="hero flex justify-center items-center pt-[8rem]">
+      <section class="px-[10%] flex flex-col text-center items-center mt-5">
+        <div class="size-32 overflow-hidden rounded-full" data-aos="fade-up">
+          <img src="imgs/tanjiro.jpg" alt="Soytry" />
+        </div>
+        <h1 class="text-white text-xl mt-4" data-aos="fade-up">
+          Hi! I'm Soytry MEY
+        </h1>
+        <h2 class="mt-4 text-3xl text-white leading-10" data-aos="fade-right">
+          Frontend web developer <br />
+          based in Kandal.
+        </h2>
+        <h3 class="text-white text-sm leading-8 mt-3" data-aos="fade-left">
+          I'm a frontend developer from Kandal, Phnom Penh With a years of
+          experience in multiple <br />
+          companies like Microsoft, Tesla and Apple.
+        </h3>
+        <div
+          class="flex flex-col lg:flex-row md:flex-row sm:flex-row justify-center items-center gap-4 mt-4"
+        >
+          <a
+            href="#"
+            data-aos="fade-left"
+            class="rounded-3xl bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 px-4 py-3 flex justify-center items-center text-sm text-white"
+          >
+            contact me
+            <span
+              ><i class="fa fa-long-arrow-right ml-4" aria-hidden="true"></i
+            ></span>
+          </a>
+          <a
+            href="#"
+            data-aos="fade-right"
+            class="rounded-3xl bg-white px-4 py-3 flex justify-center items-center text-black text-sm"
+          >
+            my resume
+            <span
+              ><i class="fa fa-cloud-download ml-4" aria-hidden="true"></i
+            ></span>
+          </a>
+        </div>
+      </section>
+    </section>
+    <section id="about" class="flex justify-center items-center pt-5">
+      <div class="px-[10%] text-center mt-20">
+        <h2 class="text-sm text-gray-300" data-aos="fade-up">Introduce</h2>
+        <h1 class="text-4xl text-gray-200" data-aos="fade-up">About Me</h1>
+        <div class="flex flex-col gap-20 w-full lg:flex-row mt-5 -z-10">
+          <div
+            class="max-w-max mx-auto relative z-[-1]"
+            data-aos="fade-up-left"
+          >
+            <img
+              src="imgs/tanjiro.jpg"
+              alt=""
+              class="max-w-none w-64 sm:w-80 rounded-3xl"
+            />
           </div>
-          <div class="offcanvas-body">
-            <ul
-              class="navbar-nav justify-content-center align-items-lg-center flex-grow-1 pe-3"
+          <div class="flex-1">
+            <h3
+              class="text-sm leading-7 text-start mb-5 text-white"
+              data-aos="fade-right"
             >
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
-                  >Home</a
+              I am an experienced Frontend Developer with over a decade of
+              professional expertise in the field. Throughout my career, I have
+              had the privilege of collaborating with prestigious organizations,
+              contributing.
+            </h3>
+            <ul
+              class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 z-10 gap-6 max-w-3xl"
+            >
+              <li
+                class="border-[1px] group hover:translate-y-[-10px] hover:bg-white transition-all ease-out duration-300 px-5 rounded-md"
+                data-aos="zoom-in"
+              >
+                <p
+                  class="my-4 text-start text-3xl group-hover:text-black text-white"
                 >
+                  <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                </p>
+                <h1
+                  class="text-md font-bold group-hover:text-black text-white mb-4 text-start"
+                >
+                  Education
+                </h1>
+                <p
+                  class="text-sm group-hover:text-black text-gray-400 text-start mb-4"
+                >
+                  B.Degree Infomation Technology.
+                </p>
               </li>
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="about.html">About</a>
+              <li
+                class="border-[1px] group hover:translate-y-[-10px] hover:bg-white transition-all ease-out duration-300 px-5 rounded-md"
+                data-aos="zoom-in"
+              >
+                <p
+                  class="my-4 text-start text-3xl group-hover:text-black text-white"
+                >
+                  <i class="fa fa-briefcase" aria-hidden="true"></i>
+                </p>
+                <h1
+                  class="text-md font-bold group-hover:text-black text-white mb-4 text-start"
+                >
+                  Projects
+                </h1>
+                <p
+                  class="text-sm group-hover:text-black text-gray-400 text-start mb-4"
+                >
+                  Built more than 2
+                </p>
               </li>
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="portfolio.html">Portfolio</a>
+              <li
+                class="border-[1px] group hover:translate-y-[-10px] hover:bg-white transition-all ease-out duration-300 px-5 rounded-md"
+                data-aos="zoom-in"
+              >
+                <p
+                  class="my-4 text-start text-3xl group-hover:text-black text-white"
+                >
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                </p>
+                <h1
+                  class="text-md font-bold group-hover:text-black text-white mb-4 text-start"
+                >
+                  Langauges
+                </h1>
+                <p
+                  class="text-sm group-hover:text-black text-gray-400 text-start mb-4"
+                >
+                  HTML, CSS, JavaScript, Vue js.
+                </p>
               </li>
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="service.html">Service</a>
+            </ul>
+            <h1
+              class="text-md text-gray-400 text-start mt-5"
+              data-aos="fade-left"
+            >
+              Tools i use
+            </h1>
+            <ul class="flex flex-row gap-5 mt-6">
+              <li
+                data-aos="zoom-in-up"
+                class="p-3 border-[1px] border-white rounded-md flex justify-center items-center h-[70px] w-[70px] hover:translate-y-[-10px] transition-all ease-out duration-300"
+              >
+                <img src="imgs/vscode.png" alt="" class="w-full" />
               </li>
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="contact.html">Contact</a>
-              </li>
-              <li class="nav-item">
-                <div class="input-group mx-lg-2 rounded-5">
-                  <input class="form-control form-control-sm" type="text" />
-                  <button class="btn btn-primary btn-sm">Search</button>
-                </div>
+              <li
+                data-aos="zoom-in-up"
+                class="p-3 border-[1px] border-white rounded-md flex justify-center items-center h-[70px] w-[70px] hover:translate-y-[-10px] transition-all ease-out duration-300"
+              >
+                <img src="imgs/git.png" alt="" class="w-full" />
               </li>
             </ul>
           </div>
         </div>
-        <a href="#" class="btn btn-primary rounded-5">Login</a>
-        <button
-          class="navbar-toggler pe-0"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-    </nav>
-
-    <section
-      class="hero-section"
-      data-aos="fade-down"
-      data-aos-delay="300"
-      data-aos-duration="300"
-    >
-      <div
-        class="container-fluid container-custom d-flex align-items-center justify-content-center text-white flex-column"
-      >
-        <div class="row w-100 mt-5">
-          <div
-            class="col-lg-6 col-md-6 col-sm-6 me-lg-auto d-flex flex-column align-items-lg-start align-items-md-start align-items-sm-start justify-content-center px-lg-5"
-          >
-            <h4 class="fw-bold fs-1 h4-custom">New Technology iN 2k24</h4>
-            <h5 class="fw-bold fs-3 h5-custom">
-              Skill
-              <strong class="text-custom"> JavaScript</strong>
-            </h5>
-            <h5 class="text-secondary fs-3 h5-custom">You must to learn</h5>
-            <h5 class="text-secondary fs-3 h5-custom">Everysingle Day! 👾</h5>
-            <!-- <div class="typewriter">
-              <h1 class="text-center fs-6">បច្ចេកវិទ្យាទំនើប​​ ​២០២៤</h1>
-            </div> -->
-          </div>
-          <div
-            class="col-lg-6 col-md-6 col-sm-6 me-lg-auto d-flex align-items-center justify-content-center"
-          >
-            <img
-              class="img-fluid img-custom w-75"
-              src="css/img/ai.png"
-              alt="AI"
-            />
-          </div>
-        </div>
       </div>
     </section>
-    <article data-aos="fade-right" data-aos-delay="300" data-aos-duration="300">
-      <p class="text-center fs-4 text-white">About Web development</p>
-      <h5 class="text-center text-secondary">
-        I create user-friendly and beautiful websites and applications.
-      </h5>
-      <div class="container-fluid my-5 px-5">
-        <div class="row g-0 justify-content-center align-items-center gap-5">
-          <div class="card card-about col-lg-3 col-md-4">
-            <img src="css/img/interface.jpg" class="card-img-top" alt="" />
-            <div class="card-body">
-              <h4 class="card-title fs-5">Front-end Development</h4>
-              <p class="card-text fs-6">
-                The front-end is the user-facing Website involving HTML, CSS,
-                and JavaScript to create interactive, responsive interfaces.
-              </p>
-            </div>
-            <span class="span-card">
-              <button class="btn btn-primary">Find More...</button>
-            </span>
-          </div>
-          <div class="card card-about col-lg-3 col-md-4">
-            <img src="css/img/back1.jpg" class="card-img-top" alt="" />
-            <div class="card-body">
-              <h4 class="card-title fs-5">Back-end Development</h4>
-              <p class="card-text fs-6">
-                The back-end is the server-side part of an application, managing
-                databases, server logic, and APIs. It ensures data processing,
-                storage.
-              </p>
-            </div>
-            <span class="span-card">
-              <button class="btn btn-primary">Find More...</button>
-            </span>
-          </div>
-          <div class="card card-about col-lg-3 col-md-4">
-            <img
-              src="css/img/full-stack-development-2.jpg"
-              class="card-img-top"
-              alt=""
-            />
-
-            <div class="card-body">
-              <h4 class="card-title fs-5">Full-Stack Integration</h4>
-              <p class="card-text fs-6">
-                A full-stack developer handles both front-end and back-end
-                development, managing user interfaces, databases, and APIs.
-              </p>
-            </div>
-            <span class="span-card">
-              <button class="btn btn-primary">Find More...</button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </article>
-    <section
-      class="three-sectcion my-5"
-      data-aos="zoom-in-right"
-      data-aos-delay="300"
-      data-aos-duration="300"
-    >
-      <div class="container-fluid px-5 my-4">
-        <h1 class="text-center text-primary fs-2 my-4">
-          Become to Web developer fullstack
-        </h1>
-        <div class="row g-5 justify-content-center">
-          <div class="col-12 col-lg-6 col-md-6 col-sm-6">
-            <img
-              src="css/img/ai-p.png"
-              alt="ai"
-              class="img-fluid img-custom-section3"
-            />
-          </div>
-          <div class="col-12 col-lg-6 col-md-6 col-sm-6">
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item" data-id="1">
-                <h2 class="accordion-header accordion-custom">
-                  <button
-                    class="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne"
-                    aria-expanded="true"
-                    aria-controls="collapseOne"
-                  >
-                    Talking with AI
-                  </button>
-                </h2>
-                <div
-                  id="collapseOne"
-                  class="accordion-collapse collapse show"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body">
-                    <div class="row g-4 justify-content-center">
-                      <div class="col-lg-6">
-                        <img
-                          src="css/img/chart-gpt.jpg"
-                          alt="Chat-gpt"
-                          class="img-fluid"
-                        />
-                      </div>
-                      <div class="col-lg-6">
-                        <strong>ChatGPT</strong> is an AI model by OpenAI that
-                        generates human-like text for various conversational
-                        tasks.<a
-                          href="#"
-                          class="btn btn-sm btn-outline-primary m-1"
-                          >Read more</a
-                        >
-                      </div>
-                    </div>
-                    <div class="row g-4 justify-content-center mt-2">
-                      <div class="col-lg-6">
-                        <img
-                          src="css/img/gemini.jpg"
-                          alt="gemini"
-                          class="img-fluid"
-                        />
-                      </div>
-                      <div class="col-lg-6">
-                        <strong>Gemini</strong> Witty twins, curious minds,
-                        crave knowledge, love to chat.<a
-                          href="#"
-                          class="btn btn-sm btn-outline-primary m-1"
-                          >Read more</a
-                        >
-                      </div>
-                    </div>
-                    <div class="row g-4 justify-content-center mt-2">
-                      <div class="col-lg-6">
-                        <img
-                          src="css/img/copilot.webp"
-                          alt="copilot"
-                          class="img-fluid"
-                        />
-                      </div>
-                      <div class="col-lg-6">
-                        <strong>Copilot</strong> is an AI assistant or secondary
-                        pilot, aiding in tasks, code completion, and flight
-                        management.<a
-                          href="#"
-                          class="btn btn-sm btn-outline-primary m-1"
-                          >Read more</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item" data-id="2">
-                <h2 class="accordion-header accordion-custom">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="collapseTwo"
-                  >
-                    Best Framework Font-end
-                  </button>
-                </h2>
-                <div
-                  id="collapseTwo"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body">
-                    <div class="row g-4 justify-content-center">
-                      <div class="col-lg-6">
-                        <img
-                          src="css/img/react-js.jpg"
-                          alt="react-js"
-                          class="img-fluid"
-                        />
-                      </div>
-                      <div class="col-lg-6">
-                        <strong>React Js</strong> is a JavaScript library for
-                        building UIs with reusable components and efficient
-                        state management.<a
-                          href="#"
-                          class="btn btn-sm btn-outline-primary m-1"
-                          >Read more</a
-                        >
-                      </div>
-                    </div>
-                    <div class="row g-4 justify-content-center mt-2">
-                      <div class="col-lg-6">
-                        <img
-                          src="css/img/vue-js.jpg"
-                          alt="vue-js"
-                          class="img-fluid"
-                        />
-                      </div>
-                      <div class="col-lg-6">
-                        <strong>Vue Js</strong> is a progressive JavaScript
-                        framework for building user interfaces with declarative
-                        rendering -baseand componend.<a
-                          href="#"
-                          class="btn btn-sm btn-outline-primary m-1"
-                          >Read more</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item" data-id="3">
-                <h2 class="accordion-header accordion-custom">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree"
-                    aria-expanded="false"
-                    aria-controls="collapseThree"
-                  >
-                    Best CSS Library or Framework
-                  </button>
-                </h2>
-                <div
-                  id="collapseThree"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body">
-                    <div class="row g-4 justify-content-center">
-                      <div class="col-lg-6">
-                        <img
-                          src="css/img/bootstrap.webp"
-                          alt="bootstrap"
-                          class="img-fluid"
-                        />
-                      </div>
-                      <div class="col-lg-6">
-                        <strong>Bootstrap</strong> is a popular open-source
-                        framework for building responsive, mobile-first websites
-                        using HTML, CSS, and JavaScript.<a
-                          href="#"
-                          class="btn btn-sm btn-outline-primary m-1"
-                          >Read more</a
-                        >
-                      </div>
-                    </div>
-                    <div class="row g-4 justify-content-center mt-2">
-                      <div class="col-lg-6">
-                        <img
-                          src="css/img/tailwind.png"
-                          alt="tailwind"
-                          class="img-fluid"
-                        />
-                      </div>
-                      <div class="col-lg-6">
-                        <strong>Tailwind CSS</strong> is a utility-first CSS
-                        framework for creating custom designs quickly by
-                        applying utility classes directly to HTML elements.<a
-                          href="#"
-                          class="btn btn-sm btn-outline-primary m-1"
-                          >Read more</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item" data-id="4">
-                <h2 class="accordion-header accordion-custom">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour"
-                    aria-expanded="false"
-                    aria-controls="collapseFour"
-                  >
-                    Best Framework Backend
-                  </button>
-                </h2>
-                <div
-                  id="collapseFour"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body">
-                    <div class="row g-4 justify-content-center">
-                      <div class="col-lg-6">
-                        <img
-                          src="css/img/asp-net.jpg"
-                          alt="Chat-gpt"
-                          class="img-fluid"
-                        />
-                      </div>
-                      <div class="col-lg-6">
-                        <strong>ASP.NET</strong> Microsoft framework for
-                        building dynamic web applications using various models
-                        like MVC and Web Forms.<a
-                          href="#"
-                          class="btn btn-sm btn-outline-primary m-1"
-                          >Read more</a
-                        >
-                      </div>
-                    </div>
-                    <div class="row g-4 justify-content-center mt-2">
-                      <div class="col-lg-6">
-                        <img
-                          src="css/img/node-js.jpeg"
-                          alt="gemini"
-                          class="img-fluid"
-                        />
-                      </div>
-                      <div class="col-lg-6">
-                        <strong>Node js</strong> is a JavaScript runtime for
-                        building scalable network applications using an
-                        event-driven, non-blocking model.<a
-                          href="#"
-                          class="btn btn-sm btn-outline-primary m-1"
-                          >Read more</a
-                        >
-                      </div>
-                    </div>
-                    <div class="row g-4 justify-content-center mt-2">
-                      <div class="col-lg-6">
-                        <img
-                          src="css/img/springboot6.png"
-                          alt="gemini"
-                          class="img-fluid"
-                        />
-                      </div>
-                      <div class="col-lg-6">
-                        <strong>Spring Boot</strong> simplifies Java application
-                        development with auto-configuration, standalone
-                        operation, and production-ready features.
-                        <a href="#" class="btn btn-sm btn-outline-primary m-1"
-                          >Read more</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section
-      class="two-section"
-      data-aos="fade-up"
-      data-aos-delay="300"
-      data-aos-duration="300"
-    >
-      <h3 class="text-center text-white px-5 pt-4 fs-4">
-        Technique For ITE 💻<span class="tips">💡</span>
-      </h3>
-      <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="3"
-            aria-label="Slide 4"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div
-              class="container-fluid container-card d-flex flex-column align-items-center m-0 p-5"
-            >
-              <!-- <h2>read</h2> -->
-              <div class="row g-4 align-items-center w-100">
-                <div class="col-12 col-lg-3 col-md-4 col-sm-6">
-                  <div class="card card-custom-shadow">
-                    <img
-                      src="css/img/javascript.jpeg"
-                      class="img-fluid w-50 mx-4 mt-4 rounded-1"
-                      alt="Javacript"
-                    />
-                    <div class="card-body">
-                      <h2 class="card-title fs-4">JavaScript</h2>
-                      <h3
-                        class="card-subtitle text-secondary text-subtitle-custom fs-5"
-                      >
-                        New Technique
-                      </h3>
-                      <p class="card-text mt-2 fs-6">
-                        JSON and DOM are Powerful in javascript.
-                      </p>
-                      <a class="btn btn-custom-ripple">Read more</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 col-lg-3 col-md-4 col-sm-6">
-                  <div class="card card-custom-shadow">
-                    <img
-                      src="css/img/ML.jpg"
-                      class="img-fluid w-50 mx-4 mt-4 rounded-1"
-                      alt="MachineLeaning"
-                    />
-                    <div class="card-body">
-                      <h2 class="card-title fs-4">ML</h2>
-                      <h3
-                        class="card-subtitle text-secondary text-subtitle-custom fs-5"
-                      >
-                        New Technique
-                      </h3>
-                      <p class="card-text mt-2 fs-6">
-                        Teach Ai , Solution problem and robot.
-                      </p>
-                      <a class="btn btn-custom-ripple">Read more</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-3 col-md-4 col-sm-6">
-                  <div class="card card-custom-shadow">
-                    <img
-                      src="css/img/phyton.png"
-                      class="img-fluid w-50 mx-4 mt-4 rounded-1"
-                      alt="phython"
-                    />
-                    <div class="card-body">
-                      <h2 class="card-title fs-4">Phython</h2>
-                      <h3
-                        class="card-subtitle text-secondary text-subtitle-custom fs-5"
-                      >
-                        New Technique
-                      </h3>
-                      <p class="card-text mt-2 fs-6">
-                        Base on Cybersecurity , AI Machine Leaning.
-                      </p>
-                      <a class="btn btn-custom-ripple">Read more</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-3 col-md-4 col-sm-6">
-                  <div class="card card-custom-shadow">
-                    <img
-                      src="css/img/java-edit.jpg"
-                      class="img-fluid w-50 mx-4 mt-4 rounded-1"
-                      alt="Java"
-                    />
-                    <div class="card-body">
-                      <h2 class="card-title fs-4">Coffe Java</h2>
-                      <h3
-                        class="card-subtitle text-secondary text-subtitle-custom fs-5"
-                      >
-                        New Technique
-                      </h3>
-                      <p class="card-text mt-2 fs-6">
-                        OPP is Best concept of database.
-                      </p>
-                      <a class="btn btn-custom-ripple">Read more</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div
-              class="container-fluid container-card d-flex flex-column align-items-center m-0 p-5"
-            >
-              <!-- <h2>read</h2> -->
-              <div class="row g-4 align-items-center w-100">
-                <div class="col-12 col-lg-3 col-md-4 col-sm-6">
-                  <div class="card card-custom-shadow">
-                    <img
-                      src="css/img/vue-js.jpg"
-                      class="img-fluid w-50 mx-4 mt-4 rounded-1"
-                      alt="Javacript"
-                    />
-                    <div class="card-body">
-                      <h2 class="card-title fs-4">Vue Js</h2>
-                      <h3
-                        class="card-subtitle text-secondary text-subtitle-custom fs-5"
-                      >
-                        New Technique
-                      </h3>
-                      <p class="card-text mt-2 fs-6">
-                        JSON and DOM are Powerful in javascript.
-                      </p>
-                      <a class="btn btn-custom-ripple">Read more</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 col-lg-3 col-md-4 col-sm-6">
-                  <div class="card card-custom-shadow">
-                    <img
-                      src="css/img/react-js.jpg"
-                      class="img-fluid w-50 mx-4 mt-4 rounded-1"
-                      alt="MachineLeaning"
-                    />
-                    <div class="card-body">
-                      <h2 class="card-title fs-4">React Js</h2>
-                      <h3
-                        class="card-subtitle text-secondary text-subtitle-custom fs-5"
-                      >
-                        New Technique
-                      </h3>
-                      <p class="card-text mt-2 fs-6">
-                        Teach Ai , Solution problem and robot.
-                      </p>
-                      <a class="btn btn-custom-ripple">Read more</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-3 col-md-4 col-sm-6">
-                  <div class="card card-custom-shadow">
-                    <img
-                      src="css/img/Marked-in-Angular2.png"
-                      class="img-fluid w-50 mx-4 mt-4 rounded-1"
-                      alt="phython"
-                    />
-                    <div class="card-body">
-                      <h2 class="card-title fs-4">Angular</h2>
-                      <h3
-                        class="card-subtitle text-secondary text-subtitle-custom fs-5"
-                      >
-                        New Technique
-                      </h3>
-                      <p class="card-text mt-2 fs-6">
-                        Base on Cybersecurity , AI Machine Leaning.
-                      </p>
-                      <a class="btn btn-custom-ripple">Read more</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-3 col-md-4 col-sm-6">
-                  <div class="card card-custom-shadow">
-                    <img
-                      src="css/img/jquery-pp.webp"
-                      class="img-fluid w-50 mx-4 mt-4 rounded-1"
-                      alt="Java"
-                    />
-                    <div class="card-body">
-                      <h2 class="card-title fs-4">Jquery</h2>
-                      <h3
-                        class="card-subtitle text-secondary text-subtitle-custom fs-5"
-                      >
-                        New Technique
-                      </h3>
-                      <p class="card-text mt-2 fs-6">
-                        OPP is Best concept of database.
-                      </p>
-                      <a class="btn btn-custom-ripple">Read more</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div
-              class="container-fluid container-card d-flex flex-column align-items-center m-0 p-5"
-            >
-              <!-- <h2>read</h2> -->
-              <div class="row g-4 align-items-center w-100">
-                <div class="col-12 col-lg-3 col-md-4 col-sm-6">
-                  <div class="card card-custom-shadow">
-                    <img
-                      src="css/img/javascript.jpeg"
-                      class="img-fluid w-50 mx-4 mt-4 rounded-1"
-                      alt="Javacript"
-                    />
-                    <div class="card-body">
-                      <h2 class="card-title fs-4">JavaScript</h2>
-                      <h3
-                        class="card-subtitle text-secondary text-subtitle-custom fs-5"
-                      >
-                        New Technique
-                      </h3>
-                      <p class="card-text mt-2 fs-6">
-                        JSON and DOM are Powerful in javascript.
-                      </p>
-                      <a class="btn btn-custom-ripple">Read more</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 col-lg-3 col-md-4 col-sm-6">
-                  <div class="card card-custom-shadow">
-                    <img
-                      src="css/img/ML.jpg"
-                      class="img-fluid w-50 mx-4 mt-4 rounded-1"
-                      alt="MachineLeaning"
-                    />
-                    <div class="card-body">
-                      <h2 class="card-title fs-4">ML</h2>
-                      <h3
-                        class="card-subtitle text-secondary text-subtitle-custom fs-5"
-                      >
-                        New Technique
-                      </h3>
-                      <p class="card-text mt-2 fs-6">
-                        Teach Ai , Solution problem and robot.
-                      </p>
-                      <a class="btn btn-custom-ripple">Read more</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-3 col-md-4 col-sm-6">
-                  <div class="card card-custom-shadow">
-                    <img
-                      src="css/img/phyton.png"
-                      class="img-fluid w-50 mx-4 mt-4 rounded-1"
-                      alt="phython"
-                    />
-                    <div class="card-body">
-                      <h2 class="card-title fs-4">Phython</h2>
-                      <h3
-                        class="card-subtitle text-secondary text-subtitle-custom fs-5"
-                      >
-                        New Technique
-                      </h3>
-                      <p class="card-text mt-2 fs-6">
-                        Base on Cybersecurity , AI Machine Leaning.
-                      </p>
-                      <a class="btn btn-custom-ripple">Read more</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-3 col-md-4 col-sm-6">
-                  <div class="card card-custom-shadow">
-                    <img
-                      src="css/img/java-edit.jpg"
-                      class="img-fluid w-50 mx-4 mt-4 rounded-1"
-                      alt="Java"
-                    />
-                    <div class="card-body">
-                      <h2 class="card-title fs-4">Coffe Java</h2>
-                      <h3
-                        class="card-subtitle text-secondary text-subtitle-custom fs-5"
-                      >
-                        New Technique
-                      </h3>
-                      <p class="card-text mt-2 fs-6">
-                        OPP is Best concept of database.
-                      </p>
-                      <a class="btn btn-custom-ripple">Read more</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div
-              class="container-fluid container-card d-flex flex-column align-items-center m-0 p-5"
-            >
-              <!-- <h2>read</h2> -->
-              <div class="row g-4 align-items-center w-100">
-                <div class="col-12 col-lg-3 col-md-4 col-sm-6">
-                  <div class="card card-custom-shadow">
-                    <img
-                      src="css/img/javascript.jpeg"
-                      class="img-fluid w-50 mx-4 mt-4 rounded-1"
-                      alt="Javacript"
-                    />
-                    <div class="card-body">
-                      <h2 class="card-title fs-4">JavaScript</h2>
-                      <h3
-                        class="card-subtitle text-secondary text-subtitle-custom fs-5"
-                      >
-                        New Technique
-                      </h3>
-                      <p class="card-text mt-2 fs-6">
-                        JSON and DOM are Powerful in javascript.
-                      </p>
-                      <a class="btn btn-custom-ripple">Read more</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 col-lg-3 col-md-4 col-sm-6">
-                  <div class="card card-custom-shadow">
-                    <img
-                      src="css/img/ML.jpg"
-                      class="img-fluid w-50 mx-4 mt-4 rounded-1"
-                      alt="MachineLeaning"
-                    />
-                    <div class="card-body">
-                      <h2 class="card-title fs-4">ML</h2>
-                      <h3
-                        class="card-subtitle text-secondary text-subtitle-custom fs-5"
-                      >
-                        New Technique
-                      </h3>
-                      <p class="card-text mt-2 fs-6">
-                        Teach Ai , Solution problem and robot.
-                      </p>
-                      <a class="btn btn-custom-ripple">Read more</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-3 col-md-4 col-sm-6">
-                  <div class="card card-custom-shadow">
-                    <img
-                      src="css/img/phyton.png"
-                      class="img-fluid w-50 mx-4 mt-4 rounded-1"
-                      alt="phython"
-                    />
-                    <div class="card-body">
-                      <h2 class="card-title fs-4">Phython</h2>
-                      <h3
-                        class="card-subtitle text-secondary text-subtitle-custom fs-5"
-                      >
-                        New Technique
-                      </h3>
-                      <p class="card-text mt-2 fs-6">
-                        Base on Cybersecurity , AI Machine Leaning.
-                      </p>
-                      <a class="btn btn-custom-ripple">Read more</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-3 col-md-4 col-sm-6">
-                  <div class="card card-custom-shadow">
-                    <img
-                      src="css/img/java-edit.jpg"
-                      class="img-fluid w-50 mx-4 mt-4 rounded-1"
-                      alt="Java"
-                    />
-                    <div class="card-body">
-                      <h2 class="card-title fs-4">Coffe Java</h2>
-                      <h3
-                        class="card-subtitle text-secondary text-subtitle-custom fs-5"
-                      >
-                        New Technique
-                      </h3>
-                      <p class="card-text mt-2 fs-6">
-                        OPP is Best concept of database.
-                      </p>
-                      <a class="btn btn-custom-ripple">Read more</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
-    <section
-      class="four-section px-5 my-4"
-      data-aos="zoom-in-down"
-      data-aos-delay="300"
-      data-aos-duration="300"
-    >
-      <div class="contianer-fluid p-5 bg-dark rounded-4">
-        <h3 class="text-white fs-3 fw-4">Programming Language in 2k24</h3>
-        <p class="text-white fs-5">
-          I suggest to study about these programming , and that's why they can
-          do everything.
-        </p>
-        <a href="#" class="btn btn-sm rounded-3 px-3"
-          >Find The languages
-          <i class="fa fa-hand-o-right" aria-hidden="true"></i
-        ></a>
-        <div class="row mt-2 g-2 gap-4 justify-content-center">
-          <div class="col-lg-5 col-sm-4 col-12 col-4-custom rounded-3 p-3">
-            <a class="btn btn-sm p-2 btn-icon-costom"
-              ><img
-                src="css/img/java-script (2).png"
-                alt="javacript"
-                class="img-fluid-custom"
-            /></a>
-
-            <h3 class="fs-5 fw-bold mt-3 text-white">JavaScript</h3>
-            <p class="text-white fs-6 fw-light mt-3">
-              Continued to evolve with new features, tools, and frameworks as
-              well.
-            </p>
-          </div>
-          <div class="col-lg-5 col-sm-4 col-12 col-4-custom rounded-3 p-3">
-            <a class="btn btn-sm p-2 btn-icon-costom"
-              ><img
-                src="css/img/python1.png"
-                alt="Python"
-                class="img-fluid-custom"
-            /></a>
-
-            <h3 class="fs-5 fw-bold mt-3 text-white">Python</h3>
-            <p class="text-white fs-6 fw-light mt-3">
-              Continues to be one of the most popular and versatile programming
-              languages.
-            </p>
-          </div>
-          <div class="col-lg-5 col-sm-4 col-12 col-4-custom rounded-3 p-3">
-            <a class="btn btn-sm p-2 btn-icon-costom"
-              ><img
-                src="css/img/vuejs.png"
-                alt="Vue-js"
-                class="img-fluid-custom"
-            /></a>
-
-            <h3 class="fs-5 fw-bold mt-3 text-white">Vue Js</h3>
-            <p class="text-white fs-6 fw-light mt-3">
-              Remains a popular and powerful framework for building user
-              interfaces and single-page applications.
-            </p>
-          </div>
-          <div class="col-lg-5 col-sm-4 col-12 col-4-custom rounded-3 p-3">
-            <a class="btn btn-sm p-2 btn-icon-costom"
-              ><img
-                src="css/img/java-logo.png"
-                alt="Java"
-                class="img-fluid-custom"
-            /></a>
-
-            <h3 class="fs-5 fw-bold mt-3 text-white">Java</h3>
-            <p class="text-white fs-6 fw-light mt-3">
-              Continues to be a dominant force in the software development
-              world.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section
-      class="last-section px-5"
-    >
-      <div class="container-fluid p-5 con-custom rounded-4 my-4">
-        <h3 class="text-start fs-4 text-white mb-4">
-          Interested in Working Together?
+    <section id="sevices" class="flex justify-center py-20 px-[10%]">
+      <div>
+        <h3 class="text-center text-sm text-gray-300 my-2" data-aos="fade-up">
+          What I offer
         </h3>
-        <div class="row g-0 gap-3 gap-4 justify-content-center">
-          <div
-            class="col-lg-5 col-sm-5 col-md-5 col-12 col-6-custom p-4 rounded-2 about-custom"
+        <h1 class="text-center text-4xl text-gray-300 mb-3" data-aos="fade-up">
+          My services
+        </h1>
+        <p
+          class="text-center lg:w-3/4 md:w-3/4 sm:w-10/12 w-full text-gray-400 m-auto leading-7"
+          data-aos="zoom-in-up"
+        >
+          I am forntend developer from Kandal, CAMBODIA with 1 years of
+          experience in multiple companies like Microsoft, Tesla and Apple.
+        </p>
+        <ul
+          class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6 mt-7"
+        >
+          <li
+            data-aos="zoom-in"
+            class="border-[1px] border-white px-5 py-6 text-white rounded-lg hover:bg-fuchsia-950 transition-colors duration-300 ease-out hover:border-transparent"
           >
-            <h4 class="text-white fs-5">Schedule a call</h4>
-            <p class="text-white fs-6">
-              Les's discuss your project ideas and how i can help you.
+            <img src="imgs/web-icon.png" alt="" class="w-11" />
+            <h2 class="font-medium text-md my-4">Web design</h2>
+            <p class="text-sm text-gray-300 text-start mb-4 leading-6">
+              Web development is the process of building, programming...
             </p>
-            <a href="#" class="btn btn-primary btn-sm px-3">Schedule a Call</a>
-          </div>
-          <div
-            class="col-lg-5 col-sm-5 col-md-5 col-12 col-6-custom p-4 rounded-2 about-custom"
+            <button
+              class="px-3 py-2 text-sm border-[1px] border-white rounded-lg flex justify-center items-center hover:border-transparent hover:bg-gradient-to-r from-pink-600 to-pink-500 transition-colors ease-out duration-300"
+            >
+              Read more
+              <i
+                class="fa fa-long-arrow-right ml-2 text-lg"
+                aria-hidden="true"
+              ></i>
+            </button>
+          </li>
+          <li
+            data-aos="zoom-in"
+            class="border-[1px] border-white px-5 py-6 text-white rounded-lg hover:bg-fuchsia-950 transition-colors duration-300 ease-out hover:border-transparent"
           >
-            <h4 class="text-white fs-5">Explore My Work</h4>
-            <p class="text-white fs-6">
-              View my portfolio to see the kind of work i do for you.
+            <img src="imgs/mobile-icon.png" alt="" class="w-11" />
+            <h2 class="font-medium text-md my-4">Mobile app</h2>
+            <p class="text-sm text-gray-300 text-start mb-4 leading-6">
+              Web development is the process of building, programming...
             </p>
-            <a href="#" class="btn btn-primary btn-sm px-3">View My Work </a>
-          </div>
-        </div>
+            <button
+              class="px-3 py-2 text-sm border-[1px] border-white rounded-lg flex justify-center items-center hover:border-transparent hover:bg-gradient-to-r from-pink-600 to-pink-500 transition-colors ease-out duration-300"
+            >
+              Read more
+              <i
+                class="fa fa-long-arrow-right ml-2 text-lg"
+                aria-hidden="true"
+              ></i>
+            </button>
+          </li>
+          <li
+            data-aos="zoom-in"
+            class="border-[1px] border-white px-5 py-6 text-white rounded-lg hover:bg-fuchsia-950 transition-colors duration-300 ease-out hover:border-transparent"
+          >
+            <img src="imgs/ui-icon.png" alt="" class="w-11" />
+            <h2 class="font-medium text-md my-4">UI/UX design</h2>
+            <p class="text-sm text-gray-300 text-start mb-4 leading-6">
+              Web development is the process of building, programming...
+            </p>
+            <button
+              class="px-3 py-2 text-sm border-[1px] border-white rounded-lg flex justify-center items-center hover:border-transparent hover:bg-gradient-to-r from-pink-600 to-pink-500 transition-colors ease-out duration-300"
+            >
+              Read more
+              <i
+                class="fa fa-long-arrow-right ml-2 text-lg"
+                aria-hidden="true"
+              ></i>
+            </button>
+          </li>
+          <li
+            data-aos="zoom-in"
+            class="border-[1px] border-white px-5 py-6 text-white rounded-lg hover:bg-fuchsia-950 transition-colors duration-300 ease-out hover:border-transparent"
+          >
+            <img src="imgs/graphics-icon.png" alt="" class="w-11" />
+            <h2 class="font-medium text-md my-4">Graphics design</h2>
+            <p class="text-sm text-gray-300 text-start mb-4 leading-6">
+              Web development is the process of building, programming...
+            </p>
+            <button
+              class="px-3 py-2 text-sm border-[1px] border-white rounded-lg flex justify-center items-center hover:border-transparent hover:bg-gradient-to-r from-pink-600 to-pink-500 transition-colors ease-out duration-300"
+            >
+              Read more
+              <i
+                class="fa fa-long-arrow-right ml-2 text-lg"
+                aria-hidden="true"
+              ></i>
+            </button>
+          </li>
+        </ul>
       </div>
     </section>
-    <footer class="bg-dark">
-      <div class="container-fluid px-5 mt-5">
-        <div class="row g-4 justify-content-between">
-          <div class="col-lg-3 col-md-6 col-12 order-3 order-lg-1 text-center">
-            <div class="row g-0">
-              <div class="col-12">
-                <img
-                  src="css/img/logo.png"
-                  alt="Logo-mst"
-                  class="img-fluid img-footer"
-                />
+    <section id="word" class="flex justify-center py-20 px-[10%]">
+      <div>
+        <h3 class="text-center text-sm text-gray-300 my-2" data-aos="fade-up">
+          My Portfolio
+        </h3>
+        <h1 class="text-center text-4xl text-gray-300 mb-3" data-aos="fade-up">
+          My last work
+        </h1>
+        <p
+          class="text-center lg:w-3/4 md:w-3/4 sm:w-10/12 w-full text-gray-400 m-auto leading-7"
+          data-aos="zoom-in-up"
+        >
+          Welcome to my web development portfolio! Explore a collection of
+          projects showcasing my expertise in front-end development.
+        </p>
+        <ul
+          class="z-[-1] grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6 mt-6"
+        >
+          <il
+            data-aos="fade-left"
+            class="aspect-square group cursor-pointer relative rounded-md bg-[url('imgs/work-1.png')] bg-cover bg-center bg-no-repeat"
+          >
+            <div
+              class="absolute w-10/12 p-4 flex flex-row items-center justify-between bg-white bottom-4 left-1/2 -translate-x-1/2 rounded-md group-hover:bottom-8 transition-all ease-out duration-700:"
+            >
+              <div>
+                <h1 class="text-black text-sm font-bold">Frontent Projects</h1>
+                <p class="text-sm text-gray-700">Web design</p>
               </div>
-              <div class="col-12">
-                <h5 class="text-white fs-6 p-2 text-footer-custom">
-                  Hi I'm foundation of <strong>MST</strong> Website. I create
-                  thise website in order to collect all technique and technology
-                  and all programming language and sills.
-                </h5>
+              <p
+                class="text-4xl group-hover:text-amber-400 transition ease-out duration-500"
+              >
+                <i class="fa fa-rocket" aria-hidden="true"></i>
+              </p>
+            </div>
+          </il>
+          <il
+            data-aos="fade-up"
+            class="aspect-square group cursor-pointer relative rounded-md bg-[url('imgs/work-2.png')] bg-cover bg-center bg-no-repeat"
+          >
+            <div
+              class="absolute w-10/12 p-4 flex flex-row items-center justify-between bg-white bottom-4 left-1/2 -translate-x-1/2 rounded-md group-hover:bottom-8 transition-all ease-out duration-700:"
+            >
+              <div>
+                <h1 class="text-black text-sm font-bold">Geo based app</h1>
+                <p class="text-sm text-gray-700">Mobile app</p>
               </div>
-            </div>
+              <p
+                class="text-4xl group-hover:text-amber-400 transition ease-out duration-500"
+              >
+                <i class="fa fa-rocket" aria-hidden="true"></i>
+              </p></div
+          ></il>
+          <il
+            data-aos="fade-up"
+            class="aspect-square group cursor-pointer relative rounded-md bg-[url('imgs/work-3.png')] bg-cover bg-center bg-no-repeat"
+          >
+            <div
+              class="absolute w-10/12 p-4 flex flex-row items-center justify-between bg-white bottom-4 left-1/2 -translate-x-1/2 rounded-md group-hover:bottom-8 transition-all ease-out duration-700:"
+            >
+              <div>
+                <h1 class="text-black text-sm font-bold">Photography site</h1>
+                <p class="text-sm text-gray-700">Web design</p>
+              </div>
+              <p
+                class="text-4xl group-hover:text-amber-400 transition ease-out duration-500"
+              >
+                <i class="fa fa-rocket" aria-hidden="true"></i>
+              </p></div
+          ></il>
+          <il
+            data-aos="fade-right"
+            class="aspect-square group cursor-pointer relative rounded-md bg-[url('imgs/work-4.png')] bg-cover bg-center bg-no-repeat"
+          >
+            <div
+              class="absolute w-10/12 p-4 flex flex-row items-center justify-between bg-white bottom-4 left-1/2 -translate-x-1/2 rounded-md group-hover:bottom-8 transition-all ease-out duration-700:"
+            >
+              <div>
+                <h1 class="text-black text-sm font-bold">Layout design</h1>
+                <p class="text-sm text-gray-700">UX UI</p>
+              </div>
+              <p
+                class="text-4xl group-hover:text-amber-400 transition ease-out duration-500"
+              >
+                <i class="fa fa-rocket" aria-hidden="true"></i>
+              </p></div
+          ></il>
+        </ul>
+      </div>
+    </section>
+    <section
+      id="contact"
+      class="flex justify-center items-center py-20 px-[10%]"
+    >
+      <div class="m-auto text-center text-white">
+        <div>
+          <h3 class="text-md text-gray-300" data-aos="fade-up">
+            Connect with me
+          </h3>
+          <h1 class="text-4xl text-gray-300 my-3" data-aos="fade-up">
+            Get in touch
+          </h1>
+          <p class="text-sm text-gray-400" data-aos="zoom-in-up">
+            I'd love to hear from you! If you have any questions, comments or
+            feedback, please use the form below.
+          </p>
+        </div>
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="form flex flex-col mt-3"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="6c24575a-1408-4031-8868-fd34ec66da07"
+          />
+          <div class="grid grid-cols-2 gap-7 my-3">
+            <input
+              data-aos="fade-right"
+              type="text"
+              name="name"
+              required
+              placeholder="Enter your name"
+              class="rounded-md text-pink-50 bg-[#2a004a4d] border-[1px] border-gray-200 focus:outline-none focus:border-pink-500 px-5 py-4 caret-pink-600"
+            />
+            <input
+              data-aos="fade-left"
+              type="email"
+              name="email"
+              required
+              placeholder="Enter your Email"
+              class="rounded-md text-pink-50 bg-[#2a004a4d] border-[1px] border-gray-200 focus:outline-none focus:border-pink-500 px-5 py-4 caret-pink-600"
+            />
           </div>
-          <div class="col-lg-2 col-md-6 col-12 order-1 order-lg-2 text-center">
-            <div class="row d-flex flex-column g-0 gap-2">
-              <h5 class="text-primary fs-4">Our Menu</h5>
-              <ul class="list-footer">
-                <li><a class="list-a-footer fs-6" href="#">Home</a></li>
-                <li><a class="list-a-footer fs-6" href="#">About</a></li>
-                <li><a class="list-a-footer fs-6" href="#">Portfolio</a></li>
-                <li><a class="list-a-footer fs-6" href="#">Contact</a></li>
-                <li><a class="list-a-footer fs-6" href="#">Service</a></li>
-              </ul>
-            </div>
+          <textarea
+            name="massage"
+            data-aos="zoom-in-up"
+            required
+            placeholder="Enter your message"
+            rows="6"
+            class="rounded-md text-pink-50 bg-[#2a004a4d] border-[1px] border-gray-200 focus:outline-none focus:border-pink-500 px-5 py-4 caret-pink-600 my-7 h-[300px]"
+          ></textarea>
+          <div
+            data-aos="zoom-out-right"
+            class="flex justify-between lg:w-2/5 md:2/5 sm:w-2/5 items-center bg-white px-3 py-2 rounded-lg"
+          >
+            <label for="" class="flex justify-center items-center text-black">
+              <input type="checkbox" class="size-7 mr-4 accent-pink-600" />I am
+              a human
+            </label>
+            <img src="imgs/bot.png" alt="" class="w-[50px]" />
           </div>
-          <div class="col-lg-2 col-md-6 col-12 order-2 order-lg-3 text-center">
-            <div class="row d-flex flex-column g-0 gap-2">
-              <h5 class="text-primary fs-4">Action</h5>
-              <ul class="list-footer">
-                <li><a class="list-a-footer fs-6" href="#">Client</a></li>
-                <li><a class="list-a-footer fs-6" href="#">Team</a></li>
-                <li><a class="list-a-footer fs-6" href="#">Career</a></li>
-                <li><a class="list-a-footer fs-6" href="#">Jornal</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-6 col-12 order-4 order-lg-4 text-center">
-            <div class="row d-flex flex-column g-0 gap-2">
-              <h5 class="text-primary fs-4">Social Media</h5>
-              <ul class="list-footer list-icon">
-                <li>
-                  <a class="list-a-footer fs-6" href="#"
-                    ><i
-                      class="fa fa-facebook-official fs-3 icon-hover"
-                      aria-hidden="true"
-                    ></i
-                  ></a>
-                </li>
-                <li>
-                  <a class="list-a-footer fs-6" href="#"
-                    ><i
-                      class="fa fa-twitter-square fs-3 icon-hover"
-                      aria-hidden="true"
-                    ></i
-                  ></a>
-                </li>
-                <li>
-                  <a class="list-a-footer fs-6" href="#"
-                    ><i
-                      class="fa fa-instagram fs-3 icon-hover"
-                      aria-hidden="true"
-                    ></i
-                  ></a>
-                </li>
-                <li>
-                  <a class="list-a-footer fs-6" href="#"
-                    ><i
-                      class="fa fa-linkedin-square fs-3 icon-hover"
-                      aria-hidden="true"
-                    ></i
-                  ></a>
-                </li>
-                <li>
-                  <a class="list-a-footer fs-6" href="#"
-                    ><i
-                      class="fa fa-youtube-play fs-3 icon-hover"
-                      aria-hidden="true"
-                    ></i
-                  ></a>
-                </li>
-              </ul>
-              <h3 class="text-white cradite">&copy; MEY Soytry</h3>
-            </div>
+          <button
+            type="submit"
+            data-aos="fade-up"
+            class="px-3 py-4 border-2 w-1/2 m-auto text-xl mt-7 border-white bg-[#2a004a4d] focus:border-pink-600 rounded-full"
+          >
+            Submit<i class="fa fa-long-arrow-right ml-4" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+    <footer class="flex justify-center items-center pt-20 px-[10%]">
+      <div class="w-full m-auto text-center">
+        <h1
+          class="font-bold text-white text-3xl text-center"
+          data-aos="fade-up"
+        >
+          TRY43
+          <span class="font-bold text-4xl ml-[-5px] text-purple-700">.</span>
+        </h1>
+        <h2 class="text-white text-xl" data-aos="fade-up">
+          <i class="fa fa-envelope mr-2 mt-3" aria-hidden="true"></i>
+          <span>meysoytry@gmail.com</span>
+        </h2>
+        <hr class="h-px bg-white mt-10" />
+        <div
+          class="flex justify-between items-center py-3 flex-col lg:flex-row md:flex-row sm:flex-row gap-4"
+        >
+          <p class="text-white">&copy; 2024 MEY soytry. All rights reserved.</p>
+          <div class="grid grid-cols-3 gap-7">
+            <a href="#" class="text-white text-xl">Github</a>
+            <a href="#" class="text-white text-xl">Linkedin</a>
+            <a href="#" class="text-white text-xl">Twitter</a>
           </div>
         </div>
       </div>
     </footer>
+
+    <script src="main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-    <script src="js/script.js"></script>
   </body>
 </html>
